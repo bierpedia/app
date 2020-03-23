@@ -1,32 +1,71 @@
-<template>
-    <Page>
-        <ActionBar title="Welcome to NativeScript-Vue!"/>
-        <GridLayout columns="*" rows="*">
-            <Label class="message" :text="msg" col="0" row="0"/>
-        </GridLayout>
-    </Page>
+<template android>
+  <Page>
+    <ActionBar title="Bierpedia.org - App">
+      <ActionItem text="Changelog" android.position="popup" @tap="$showModal(creditsPage)" />
+      <ActionItem text="Credits" android.position="popup" @tap="$showModal(changelogPage)" />
+    </ActionBar>
+    <BottomNavigation>
+      <TabStrip>
+        <TabStripItem>
+          <Label text="Frisches"></Label>
+        </TabStripItem>
+        <TabStripItem>
+          <Label text="Finden"></Label>
+        </TabStripItem>
+        <TabStripItem>
+          <Label text="Bewerten"></Label>
+        </TabStripItem>
+      </TabStrip>
+      <TabContentItem>
+        <Frame backgroundColor="#00495e">
+          <Entrace />
+        </Frame>
+      </TabContentItem>
+      <TabContentItem>
+        <Frame backgroundColor="#3c495e">
+          <Search />
+        </Frame>
+      </TabContentItem>
+      <TabContentItem>
+        <Frame backgroundColor="#00495e">
+          <Ratings />
+        </Frame>
+      </TabContentItem>
+    </BottomNavigation>
+  </Page>
 </template>
 
 <script lang="ts">
-  export default {
-    data() {
-      return {
-        msg: 'Hello World!'
-      }
-    }
+import Credits from "./Modals/Credits";
+import Changelog from "./Modals/Changelog";
+import Search from "./Search";
+import Entrace from "./Entrace";
+import Ratings from "./Ratings";
+export default {
+  components: {
+    Search,
+    Entrace,
+    Ratings
+  },
+  data() {
+    return {
+      creditsPage: Credits,
+      changelogPage: Changelog
+    };
   }
+};
 </script>
 
 <style scoped>
-    ActionBar {
-        background-color: #53ba82;
-        color: #ffffff;
-    }
+ActionBar {
+  background-color: #53ba82;
+  color: #ffffff;
+}
 
-    .message {
-        vertical-align: center;
-        text-align: center;
-        font-size: 20;
-        color: #333333;
-    }
+.message {
+  vertical-align: center;
+  text-align: center;
+  font-size: 20;
+  color: #333333;
+}
 </style>
