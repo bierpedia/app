@@ -14,7 +14,11 @@
 </template>
 
 <script lang="ts">
+import Beer from './Modals/Beer'
 export default {
+  components:{
+    Beer
+  },
   data() {
     return {
       searchQuery: "",
@@ -37,7 +41,7 @@ export default {
       
     },
     onItemTap() {
-        console.log("onItemTap");
+        this.$showModal(Beer);
     }
   }
 };
