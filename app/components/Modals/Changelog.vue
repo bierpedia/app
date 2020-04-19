@@ -1,3 +1,8 @@
+<!-- TODO: 
+  Hier soll ein Changelogtext angezeigt werden:
+  1. Es ist zu überlegen, ob der Text statisch mit jedem Update deployed wird oder dynamisch von 
+     einer Webquelle geladen wird.
+-->
 <template android>
     <Page>
         <GridLayout columns="*" rows="*">
