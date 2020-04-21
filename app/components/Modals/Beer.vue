@@ -1,11 +1,3 @@
-<!-- TODO: 
-  Hier sollen alle Infos zu einem Bier dargestellt werden:
-  1. Detailansicht für ein Bier (Titel, Sorte, Brauerei, Alc., Durchschnitts-Note, Land, Foto, Allgemeintext, etc.)
-  2. Lokale Bewertung/Notiz anzeigen und Button zum anlegen/editieren.
-  3. Persönliche Note des Benutzeraccounts (Erforderlich: Benutzer Authentifizierung)
-  4. Kommentare und Kommentarfunktion (wie auf Webseite).
--->
-
 <template android>
     <Page>
         <GridLayout columns="*" rows="*">
@@ -15,7 +7,6 @@
         </GridLayout>
     </Page>
 </template>
-
 
 <script lang="ts">
   export default {

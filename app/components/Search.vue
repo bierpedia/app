@@ -1,11 +1,3 @@
-<!-- TODO: 
-  Die Suche soll Schrittweise erweitert werden:
-  1. Suche nach Biertiteln. In den Suchergebnissen werden nur Biere angezeigt.
-  2. Erweiterung auf Brauereien. Ergebnisse sollen strukturiert angezeigt werden. (Divider: Biere, Brauereien, etc.)
-  3. Erweiterung auf Biersorten.
-  [4. Erweiterung auf Volltext in allen Artikeln]
--->
-
 <template android>
   <Page actionBarHidden="true">
       <StackLayout backgroundColor="#3c495e">
