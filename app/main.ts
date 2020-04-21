@@ -17,5 +17,5 @@ Vue.config.debug = (TNS_ENV !== 'production')
 
 new Vue({
   store,
-  render: h => h('frame', [h(App)])
+  render: h => h('frame', [h(App)]),
 }).$start()
