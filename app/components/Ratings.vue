@@ -7,12 +7,11 @@
 </template>
 
 <script lang="ts">
-  export default {
-    data() {
-      return {
-        msg: 'Ratings'
-      }
-    }
+  import { Component, Prop, Vue } from "vue-property-decorator";
+
+  @Component({})
+  export default class Ratings extends Vue {
+    @Prop() private msg: string = 'Ratings';
   }
 </script>
 

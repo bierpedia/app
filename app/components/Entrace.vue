@@ -7,12 +7,11 @@
 </template>
 
 <script lang="ts">
-  export default {
-    data() {
-      return {
-        msg: 'Firsches'
-      }
-    }
+  import { Component, Prop, Vue } from "vue-property-decorator";
+  
+  @Component({})
+  export default class Entrace extends Vue {
+    @Prop() private msg: string = 'Firsches';
   }
 </script>
 

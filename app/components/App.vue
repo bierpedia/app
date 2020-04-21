@@ -36,24 +36,25 @@
 </template>
 
 <script lang="ts">
+
+import { Component, Prop, Vue } from "vue-property-decorator";
+
 import Credits from "./Modals/Credits";
 import Changelog from "./Modals/Changelog";
 import Search from "./Search";
 import Entrace from "./Entrace";
 import Ratings from "./Ratings";
-export default {
-  components: {
+
+@Component({components: {
     Search,
     Entrace,
     Ratings
-  },
-  data() {
-    return {
-      creditsPage: Credits,
-      changelogPage: Changelog
-    };
   }
-};
+})
+export default class App extends Vue {
+  private creditsPage: any = Credits;
+  private changelogPage: any = Changelog;
+}
 </script>
 
 <style scoped>

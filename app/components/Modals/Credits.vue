@@ -8,12 +8,11 @@
 </template>
 
 <script lang="ts">
-  export default {
-    data() {
-      return {
-        msg: 'Credits'
-      }
-    }
+  import { Component, Prop, Vue } from "vue-property-decorator";
+
+  @Component({})
+  export default class Credis extends Vue {
+    @Prop() private msg: string = 'Credits';
   }
 </script>
 

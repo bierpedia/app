@@ -9,13 +9,12 @@
 </template>
 
 <script lang="ts">
-  export default {
-    data() {
-      return {
-        imageUrl: "https://bierpedia.org/wp-content/uploads/2015/03/platzhalter-380x800.jpg",
-        beerTitle: "SomeBeer"
-      }
-    }
+  import { Component, Prop, Vue } from "vue-property-decorator";
+
+  @Component({})
+  export default class Beer extends Vue {
+    @Prop() private imageUrl: string = "https://bierpedia.org/wp-content/uploads/2015/03/platzhalter-380x800.jpg";
+    @Prop() private beerTitle: string = "SomeBeer";
   }
 </script>
 
